@@ -70,7 +70,7 @@ def get_chapter(url):
     novel_text = '\n\n'.join(clean_paragraphs)
     
     # Get next chapter link
-    next_link = soup.find('a', rel='Next Post')
+    next_link = soup.find('a', rel='Next Post:')
     next_url = next_link['href'] if next_link else None
     
     return title_text, novel_text, next_url
